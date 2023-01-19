@@ -1,15 +1,24 @@
 import React from 'react';
+import {
+  ButtonShape, ButtonDecoration, StatisticsShape, NotificationShape
+} from './Common.styled.js';
+
 
 const FeedbackOption = ({onhandleClickGoodCounter, onhandleClickNeutralCounter, onhandleClickBadCounter, onCountTotalFeedback}) => (
-    
-  <div className="Options" >
-            <button type="button" onClick= {onhandleClickGoodCounter}>Good</button>
-            <button type="button"  onClick= {onhandleClickNeutralCounter}>Neutral</button>
-        <button type="button" onClick={onhandleClickBadCounter}>Bad</button>
+  <>
+     <StatisticsShape>Please leave feedback</StatisticsShape>
+    <ButtonShape>
+            <ButtonDecoration type="Button" onClick= {onhandleClickGoodCounter}>Good</ButtonDecoration>
+            <ButtonDecoration type="Button"  onClick= {onhandleClickNeutralCounter}>Neutral</ButtonDecoration>
+    <ButtonDecoration type="Button" onClick={onhandleClickBadCounter}>Bad</ButtonDecoration>
+      </ButtonShape>  
+          <StatisticsShape>   <span>Statistics</span>  </StatisticsShape>
         {onCountTotalFeedback === 0 && (
-            <p className="Notification message">There is no feedback</p>)}
+            <NotificationShape>There is no feedback</NotificationShape>)}
+    </>
+
             
-            </div>
+        
 
          
  

@@ -47,8 +47,6 @@ class Section extends React.Component {
 
     render() {
         return (<div className="Title">
-                  
-                <p>Please leave feedback</p>
                    
             <FeedbackOption
                 onhandleClickGoodCounter={this.handleClickGoodCounter}
