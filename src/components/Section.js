@@ -73,42 +73,4 @@ class Section extends React.Component {
     }
 }
 
-
 export default Section;
-
-// this.state.good + this.state.neutral + this.state.bad
-
-
-        //  <p Notification message="There is no feedback"></p>
-        //         <p>   <span>Statistics</span>  </p>
-        //              <p>Good: {this.state.good}</p>
-        //     <p>Neutral: {this.state.neutral}</p>
-        //     <p>Bad: {this.state.bad}</p>
-        //     <p>Total: {this.state.good + this.state.neutral + this.state.bad}</p>
-        //     <p>Positive leave feedback: {0}</p>
-//         </div> 
-{/* {this.countTotalFeedback() !== 0 && (
-                <div>
-                    <p>   <span>Statistics</span>  </p>
-                    <p>Good: {this.state.good}</p>
-                    <p>Neutral: {this.state.neutral}</p>
-                    <p>Bad: {this.state.bad}</p>
-                    <p>Total: {this.countTotalFeedback()}</p>
-                    <p>Positive leave feedback: {this.countPositiveFeedbackPercentage()}%</p>
-                </div>)} */}
-          
-
-            //              <div className="Counter__controls" >
-            // <button type="button" onClick= {this.handleClickGoodCounter}>Good</button>
-            // <button type="button"  onClick= {this.handleClickNeutralCounter}>Neutral</button>
-            // <button type="button"  onClick= {this.handleClickBadCounter}>Bad</button>
-            // </div>
-
-            //     {this.countTotalFeedback() === 0 && (
-            //     <div>
-            //         <p Notification message="There is no feedback">There is no feedback</p>
-            //     </div>)}
- 
-          
-
-            {/* <NotificationMessage/> */}
