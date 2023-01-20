@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types';
 import React from 'react';
 import {
    StatisticResultShape,
@@ -19,3 +20,13 @@ const Statistics = ({onGood, onNeutral, onBad, onCountTotalFeedback, onCountPosi
 );
 
 export default Statistics;
+
+Statistics.propTypes = {
+
+    onGood: PropTypes.string.isRequired,
+    onNeutra: PropTypes.string.isRequired,
+    onBad: PropTypes.string.isRequired,
+    onCountTotalFeedback: PropTypes.string.isRequired,
+    onCountPositiveFeedbackPercentage: PropTypes.string.isRequired,
+   
+}
