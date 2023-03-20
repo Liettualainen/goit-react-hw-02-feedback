@@ -10,10 +10,7 @@ class Section extends React.Component {
         neutral: 0,
        bad: 0,
     }
-    
-    // static defaultProps = {
-    //    Initialtotal: 0,
-    // }
+
         
     handleClickGoodCounter = () => {
         this.setState((prevState) => {
@@ -43,12 +40,17 @@ class Section extends React.Component {
         return isNaN(Math.round(this.state.good / this.countTotalFeedback() * 100)) ? 0 : Math.round(this.state.good / this.countTotalFeedback() * 100)
     }
 
-         
+
 
     render() {
+
+        const { good } = this.state;
+        const { neutral } = this.state;
+        const { bad } = this.state;
+
         return (<div className="Title">
                    
-            <FeedbackOption
+            <FeedbackOption              
                 onhandleClickGoodCounter={this.handleClickGoodCounter}
                 onhandleClickNeutralCounter= {this.handleClickNeutralCounter}
                 onhandleClickBadCounter= {this.handleClickBadCounter}
@@ -56,9 +58,9 @@ class Section extends React.Component {
             />
         
             <Statistics
-                onGood={this.state.good}
-                onNeutral={this.state.neutral}
-                onBad={this.state.bad}
+                onGood={good}
+                onNeutral={neutral}
+                onBad={bad}
                 onCountTotalFeedback={this.countTotalFeedback()}
                 onCountPositiveFeedbackPercentage={this.countPositiveFeedbackPercentage()}
             />

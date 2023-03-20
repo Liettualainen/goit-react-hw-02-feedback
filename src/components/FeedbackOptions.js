@@ -5,15 +5,28 @@ import {
 } from './Common.styled.js';
 
 
-const FeedbackOption = ({onhandleClickGoodCounter, onhandleClickNeutralCounter, onhandleClickBadCounter, onCountTotalFeedback}) => (
+// const Options = [
+//   { label: 'Good'},
+//   {label: 'Neutral'},
+//   { label: 'Bad' },
+
+// ];
+
+
+const FeedbackOption = ({ Options, onLeaveFedback, onhandleClickGoodCounter,
+  onhandleClickNeutralCounter, onhandleClickBadCounter, onCountTotalFeedback }) => (
   <>
      <StatisticsShape>Please leave feedback</StatisticsShape>
     <ButtonShape>
+      {/* {Options.map(({ label }) => (
+        <ButtonDecoration type="Button" key={label} onClick={()=> onLeaveFedback(label)} >{label }</ButtonDecoration>
+      ))} */}
             <ButtonDecoration type="Button" onClick= {onhandleClickGoodCounter}>Good</ButtonDecoration>
             <ButtonDecoration type="Button"  onClick= {onhandleClickNeutralCounter}>Neutral</ButtonDecoration>
             <ButtonDecoration type="Button" onClick={onhandleClickBadCounter}>Bad</ButtonDecoration>
       </ButtonShape>  
-          <StatisticsShape>   <span>Statistics</span>  </StatisticsShape>
+
+      <StatisticsShape>   <span>Statistics</span>  </StatisticsShape>
         {onCountTotalFeedback === 0 && (
             <NotificationShape>There is no feedback</NotificationShape>)}
     </>
@@ -31,7 +44,7 @@ FeedbackOption.propTypes = {
 
     onhandleClickGoodCounter: PropTypes.string.isRequired,
     onhandleClickNeutralCounter: PropTypes.string.isRequired,
-    onhandleClickBadCountere: PropTypes.string.isRequired,
+    onhandleClickBadCounter: PropTypes.string.isRequired,
     onCountTotalFeedback: PropTypes.string.isRequired,
    
 }

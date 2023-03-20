@@ -23,10 +23,10 @@ export default Statistics;
 
 Statistics.propTypes = {
 
-    onGood: PropTypes.string.isRequired,
-    onNeutra: PropTypes.string.isRequired,
-    onBad: PropTypes.string.isRequired,
-    onCountTotalFeedback: PropTypes.string.isRequired,
-    onCountPositiveFeedbackPercentage: PropTypes.string.isRequired,
+    onGood: PropTypes.number.isRequired,
+    onNeutral: PropTypes.number.isRequired,
+    onBad: PropTypes.number.isRequired,
+    onCountTotalFeedback: PropTypes.number.isRequired,
+    onCountPositiveFeedbackPercentage: PropTypes.number.isRequired,
    
 }
